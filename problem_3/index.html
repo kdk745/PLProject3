@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript" src="project2.js"></script>
+
+<link rel="stylesheet" type="text/css" href="home.css">
+</head>
+
+<body>
+<header>
+	<h1 class="jumbotron"><small>Welcome to the Person Tester application</small></h1>
+	<h2>Create Customer or employee</h2>
+<ul class="nav nav-pills">
+  <li role="presentation" id="cus_tab"><a href="#">Customer</a></li>
+  <li role="presentation" id="emp_tab"><a href="#">Employee</a></li>
+</ul>
+</header>
+	<br>
+	<div id = "main" class="container">
+		<div id = 'emp_container' class='container' style='display:none'>
+			<table class='table table-striped'>
+				<thead><i>Enter Employee Information</i></thead>
+			<form id ='emp_form' onsubmit='create_emp()'>
+			<tr>
+				<td>
+				<input type='text' id='emp_first' placeholder='first name'>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<input type='text' id='emp_last' placeholder='last name'>
+				</td>
+			</tr>
+			<tr>
+				<td>	
+				<input type='email' id='emp_email' placeholder='email'>
+				</td>
+			</tr>
+			<tr>
+				<td>	
+				<input type='text' id='emp_social' placeholder='social security'>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<input class= 'btn btn-success' type='submit' value='submit' id='emp_submit'>
+				</td>
+			</tr>
+			</form>
+		</table>
+		</div>
+		<div id = 'cus_container' class='container' style='display:none'>
+			<table class='table table-striped'>
+				<thead><i>Enter Customer Information</i></thead>
+			<form id ='cus_form' onsubmit='create_cus()'>
+			<tr>
+				<td>
+				<input type='text' id='cus_first' placeholder='first name'>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<input type='text' id='cus_last' placeholder='last name'>
+				</td>
+			</tr>
+			<tr>
+				<td>	
+				<input type='email' id='cus_email' placeholder='email'>
+				</td>
+			</tr>
+			<tr>
+				<td>	
+				<input type='text' id='cus_num' placeholder='customer number'>
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<input class = 'btn btn-success' type='submit' value='submit' id='cus_submit'>
+				</td>
+			</tr>
+			</form>
+		</table>
+		</div>
+
+	</div>
+</body>
+</html>
