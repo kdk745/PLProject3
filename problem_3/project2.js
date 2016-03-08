@@ -98,6 +98,14 @@ function no(){
 
 
 function create_emp(){
+	var patt = /[\w]/i;
+	var patt2 = /[\d]/i;
+	if ((!patt.test($("#emp_first").val()) || !patt.test($("#emp_last").val()))||
+		!patt2.test($("#emp_social").val())){
+		 alert("Please fill in all fields correctly");
+	}
+	else{
+
 	var emp = Object.create(employee);
 	emp.run('$firstName')($("#emp_first").val());
 	emp.run('$lastName')($("#emp_last").val());
@@ -111,10 +119,18 @@ function create_emp(){
 		"</td><td>"+emp.run('social')+"</td></tr>"+
 		"</table><h2><small>Continue?</small></h2><button onclick='window.location.reload()'>Yes</button>"+
 		"<button onclick='no();'>No</button>");	
+	}
 };
 
 
 function create_cus(){
+	var patt = /[\w]/i;
+	var patt2 = /[\d]/i;
+	if ((!patt.test($("#cus_first").val()) || !patt.test($("#cus_last").val()))||
+		!patt2.test($("#cus_num").val())){
+		 alert("Please fill in all fields correctly");
+	}
+	else{
 	var cus = Object.create(customer);
 	cus.run('$firstName')($("#cus_first").val());
 	cus.run('$lastName')($("#cus_last").val());
@@ -128,5 +144,6 @@ function create_cus(){
 		"</td><td>"+cus.run('cusNum')+"</td></tr>"+
 		"</table><h2><small>Continue?</small></h2><button onclick='window.location.reload()'>Yes</button>"+
 		"<button onclick='no();'>No</button>");	
+	}
 
 };
